@@ -1,0 +1,38 @@
+<!--
+  Generated template for the DetallePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalle del producto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nombre del producto</ion-label>
+      <ion-input type="text" [(ngModel)]="producto.nombre"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Descripcion</ion-label>
+      <ion-textarea [(ngModel)]="producto.descripcion"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Precio</ion-label>
+      <ion-input type="text" [(ngModel)]="producto.precio"></ion-input>
+    </ion-item>
+    <div padding>
+      <button ion-button block (click)="addProducto()">Guardar producto</button>
+      <button *ngIf="id!=0" ion-button block color="danger" (click)="borrarProducto()">Eliminar producto</button>
+    </div>
+  </ion-list>
+</ion-content>
